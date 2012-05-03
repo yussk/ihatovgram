@@ -3,6 +3,7 @@ package com.ipuweb.ihatovgram;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -13,6 +14,11 @@ public class IhatovgramActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+        Intent intent = getIntent();
+        String accountName = intent.getStringExtra("accountName");
+        Log.d("DEBUG", accountName);
+        
         
         Button btnCamera = (Button)findViewById(R.id.button1);
         
